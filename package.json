@@ -1,0 +1,40 @@
+{
+  "name": "sketch-starter",
+  "version": "1.0.0",
+  "description": "Tiny boilerplate with Sketch.js for Canvas/WebGL experiment.",
+  "main": "src/index.js",
+  "scripts": {
+    "open": "opener http://localhost:9966",
+    "serve": "./node_modules/wzrd/bin.js src/index.js:build/build.js",
+    "start": "npm run serve & npm run open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ayamflow/sketch-starter"
+  },
+  "author": "= <=>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ayamflow/sketch-starter/issues"
+  },
+  "homepage": "https://github.com/ayamflow/sketch-starter",
+  "devDependencies": {
+    "browserify": "^9.0.3",
+    "browserify-shim": "^3.8.3",
+    "opener": "^1.4.0",
+    "wzrd": "^1.2.1"
+  },
+  "browser": {
+    "Sketch": "./vendor/sketch.js",
+    "dat": "./vendor/dat.gui.min.js"
+  },
+  "browserify-shim": {
+    "Sketch": "Sketch",
+    "dat": "dat"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}
